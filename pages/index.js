@@ -16,7 +16,6 @@ export default class Sass extends React.Component {
 
   handleInput (input) {
     const guess = input.target.value
-    console.log(this.state.password, guess)
     if (guess === this.state.password) {
       this.setState({ visible: true })
     } else {
@@ -25,7 +24,6 @@ export default class Sass extends React.Component {
   }
 
   _link () {
-    console.log(this.state.visible);
     if (this.state.visible === true) {
       return <Link to={prefixLink('/list/')}>Wine List</Link>
     } else {
